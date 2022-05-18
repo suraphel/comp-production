@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+        api-server:
+                image: "produksjonsplass-api"
+                restart: on-failure
+                ports:
+                        - 5000:8080
+
+        db-server:
+                image: "produksjonsplass-db"
+                restart: on-failure
+                ports:
+                        - 5432:5432
